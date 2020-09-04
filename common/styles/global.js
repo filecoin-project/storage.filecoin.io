@@ -73,12 +73,16 @@ export const injectGlobalStyles = () => css`
   }
 
   html, body {
-    background: black;
+    background: #111;
     color: white;
     font-size: 16px;
-    font-family: 'inter-regular', helvetica neue, helvetica, sans-serif;
+    font-family: 'mono', helvetica neue, helvetica, sans-serif;
     scrollbar-width: none;
     -ms-overflow-style: -ms-autohiding-scrollbar;
+
+    @media (max-width: 832px) {
+      font-size: 10px;
+    }
 
     ::-webkit-scrollbar {
       display: none;
