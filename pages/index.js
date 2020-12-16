@@ -45,20 +45,28 @@ export default class IndexPage extends React.Component {
             Updated on {Strings.toDateSinceEpoch(this.props.epoch)}
           </p>
           <br />
-          <p css={STYLES_ACCENT_TEXT}>{this.props.total_unique_cids}</p>
+          <p css={STYLES_ACCENT_TEXT}>
+            {this.props.total_unique_cids.toLocaleString()}
+          </p>
           <p css={STYLES_TEXT}>Total unique CIDs</p>
           <br />
-          <p css={STYLES_ACCENT_TEXT}>{this.props.total_unique_providers}</p>
+          <p css={STYLES_ACCENT_TEXT}>
+            {this.props.total_unique_providers.toLocaleString()}
+          </p>
           <p css={STYLES_TEXT}>Total unique providers</p>
           <br />
-          <p css={STYLES_ACCENT_TEXT}>{this.props.total_unique_clients}</p>
+          <p css={STYLES_ACCENT_TEXT}>
+            {this.props.total_unique_clients.toLocaleString()}
+          </p>
           <p css={STYLES_TEXT}>Total unique clients</p>
           <br />
-          <p css={STYLES_ACCENT_TEXT}>{this.props.total_num_deals}</p>
+          <p css={STYLES_ACCENT_TEXT}>
+            {this.props.total_num_deals.toLocaleString()}
+          </p>
           <p css={STYLES_TEXT}>Total storage deals</p>
           <br />
           <p css={STYLES_ACCENT_TEXT}>
-            {this.props.total_stored_data_size} BYTES (
+            {this.props.total_stored_data_size.toLocaleString()} BYTES (
             {Strings.bytesToSize(this.props.total_stored_data_size, 4)})
           </p>
           <p css={STYLES_TEXT}>Total data stored</p>
