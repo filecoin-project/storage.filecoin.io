@@ -1,50 +1,10 @@
-import { css } from "@emotion/react";
+import { css } from '@emotion/react';
 
 /* prettier-ignore */
 export const injectGlobalStyles = () => css`
   @font-face {
     font-family: 'mono';
     src: url('/static/SFMono-Medium.woff');
-  }
-
-  @font-face {
-    font-family: 'mono-bold';
-    src: url('/static/SFMono-Bold.woff');
-  }
-
-  @font-face {
-    font-family: 'inter-regular';
-    src: url('/static/Inter-Regular.woff');
-  }
-
-  @font-face {
-    font-family: 'inter-semi-bold';
-    src: url('/static/Inter-SemiBold.woff');
-  }
-
-  @font-face {
-    font-family: 'inter-medium';
-    src: url('/static/Inter-Medium.woff');
-  }
-
-  @font-face {
-    font-family: 'fira-code-regular';
-    src: url('/static/FiraCode-Regular.woff');
-  }
-
-  @font-face {
-    font-family: 'fira-code-bold';
-    src: url('/static/FiraCode-Bold.woff');
-  }
-
-  @font-face {
-    font-family: 'jet-brains-regular';
-    src: url('/static/JetBrainsMono-Regular.woff');
-  }
-
-  @font-face {
-    font-family: 'jet-brains-bold';
-    src: url('/static/JetBrainsMono-Bold.woff');
   }
 
   html, body, div, span, applet, object, iframe,

@@ -8,7 +8,7 @@ export const isEmpty = (string) => {
     return true;
   }
 
-  if (typeof string === "object") {
+  if (typeof string === 'object') {
     return true;
   }
 
@@ -32,21 +32,11 @@ export const toDateSinceEpoch = (epoch) => {
 };
 
 export const bytesToSize = (bytes, decimals = 2) => {
-  if (bytes === 0) return "0 Bytes";
+  if (bytes === 0) return '0 Bytes';
 
   const k = 1024;
   const dm = decimals < 0 ? 0 : decimals;
-  const sizes = [
-    "Bytes",
-    "KiB",
-    "MiB",
-    "GiB",
-    "TiB",
-    "PiB",
-    "EiB",
-    "ZiB",
-    "YiB",
-  ];
+  const sizes = ['Bytes', 'KiB', 'MiB', 'GiB', 'TiB', 'PiB', 'EiB', 'ZiB', 'YiB'];
 
   const i = Math.floor(Math.log(bytes) / Math.log(k));
 
