@@ -42,10 +42,19 @@ export default class IndexPage extends React.Component {
       <Page>
         <div css={STYLES_BODY}>
           <p css={STYLES_TEXT}>
-            Updated on {Strings.toDateSinceEpoch(this.props.epoch)}{' '}
+            Actually,{' '}
+            <a style={{ color: '#fff' }} href="https://filecoin.io">
+              Filecoin
+            </a>{' '}
+            is doing well.
+          </p>
+          <br />
+          <p css={STYLES_TEXT}>
+            This page was updated on {Strings.toDateSinceEpoch(this.props.epoch)}{' '}
             <a href="https://file.app" style={{ color: '#fff' }}>
               (Get more data)
             </a>
+            . The numbers here are what is currently stored on the Filecoin network, and does not include historical numbers or expired storage deals.
           </p>
           <br />
           <p css={STYLES_ACCENT_TEXT}>{this.props.total_unique_cids.toLocaleString()}</p>
