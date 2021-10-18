@@ -37,18 +37,31 @@ export const getServerSideProps = async (context) => {
 };
 
 export default class IndexPage extends React.Component {
+  state = {
+    isRoot: true,
+  };
+
+  componentDidMount() {
+    if (!document.location.origin.includes('filecoin.io')) {
+      this.setState({ isRoot: false });
+    }
+  }
+
   render() {
     return (
       <Page>
         <div css={STYLES_BODY}>
-          <p css={STYLES_TEXT}>
-            Actually,{' '}
-            <a style={{ color: '#fff' }} href="https://filecoin.io">
-              Filecoin
-            </a>{' '}
-            is doing well.
-          </p>
-          <br />
+          {!this.state.isRoot ? (
+            <p css={STYLES_TEXT}>
+              Actually,{' '}
+              <a style={{ color: '#fff' }} href="https://filecoin.io">
+                Filecoin
+              </a>{' '}
+              is doing well.
+              <br />
+              <br />
+            </p>
+          ) : null}
           <p css={STYLES_TEXT}>
             This page was updated on {Strings.toDateSinceEpoch(this.props.epoch)}{' '}
             <a href="https://file.app" style={{ color: '#fff' }}>
